@@ -3,7 +3,7 @@
 
   An Angular directive to click an element on keypress.
 ###
-angular.module('keypressClick').directive 'keypressClick', ->
+angular.module('keypressClick', []).directive 'keypressClick', ->
 
   class UnrecognizedKeyExpressionError extends Error
     constructor : (exp) ->
