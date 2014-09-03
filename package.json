@@ -1,0 +1,13 @@
+{
+  "name": "keypressClick",
+  "version": "0.0.1",
+  "description": "Angular directive to click on a keypress",
+  "private": true,
+  "devDependencies": {
+    "coffeelint": "~1.1.0",
+    "grunt": "~0.4.2",
+    "grunt-contrib-coffee": "~0.10.0",
+    "grunt-coffeelint": "0.0.8",
+    "grunt-contrib-watch": "~0.5.3"
+  }
+}

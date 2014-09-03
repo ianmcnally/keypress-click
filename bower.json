@@ -1,0 +1,6 @@
+{
+  "name": "keypressClick",
+  "version": "0.0.1",
+  "main": "dist/keypress_click.js",
+  "dependencies": {}
+}
