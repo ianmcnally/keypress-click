@@ -1,6 +1,12 @@
 # keypress-click
 An Angular directive to click on a keypress
 
+## Installation
+By bower:
+    bower install keypress-click
+
+Or clone this repo.
+
 ## Usage
 
 1. Include `keypressClick` as an app dependency:
