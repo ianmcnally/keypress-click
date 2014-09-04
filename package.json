@@ -1,6 +1,6 @@
 {
   "name": "keypress-click",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Angular directive to click on a keypress",
   "private": true,
   "devDependencies": {
