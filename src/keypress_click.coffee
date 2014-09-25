@@ -1,5 +1,5 @@
 ###
-  keypressClick - v 0.0.2, by Ian McNally
+  keypressClick - v 0.0.3, by Ian McNally
 
   An Angular directive to click an element on keypress.
 ###
@@ -20,22 +20,27 @@ angular.module('keypressClick', []).directive 'keypressClick', ->
     return Number(code) unless !code.toString().match /^\d+$/g
     throw new UnrecognizedKeyExpressionError(key)
 
+  bound = true
+
   (_s, element, attrs) ->
     keyCode = keyToCode attrs.keypressClick
+    listenersCount = 0
 
     click = (evt) ->
-      if evt.keyCode is keyCode
-        element.click() unless element.is ':disabled'
+      if bound and evt.keyCode is keyCode and !element.is ':disabled'
+        element.click()
 
-    addListener = ->
-      angular.element(document).on 'keydown', click
+    bind = ->
+      bound = true
 
-    removeListener = ->
-      angular.element(document).off 'keydown', click
+    unbind = ->
+      bound = false
 
-    angular.element('input').on 'focus', removeListener
-    angular.element('textarea').on 'focus', removeListener
-    angular.element('input').on 'blur', addListener
-    angular.element('textarea').on 'blur', addListener
+    angular.element('input').on 'focus', unbind
+    angular.element('textarea').on 'focus', unbind
+    angular.element('input').on 'blur',  bind
+    angular.element('textarea').on 'blur',  bind
 
-    addListener()
+    angular.element(document).bind 'keydown', click
+
+    bind()
