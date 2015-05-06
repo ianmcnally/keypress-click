@@ -10,16 +10,18 @@ Or clone this repo.
 ## Usage
 
 1. Include `keypressClick` as an app dependency:
-
-    angular.module 'myApp', ['keypressClick']
+```coffee
+angular.module 'myApp', ['keypressClick']
+```
 
 2. In your HTML:
- 
-    <button keypress-click="esc" ng-click="submit()"></button>
-
+```html 
+<button keypress-click="esc" ng-click="submit()"></button>
+```
 Or:
-
-    <button keypress-click="27" ng-click="submit()"></button>
+```html
+<button keypress-click="27" ng-click="submit()"></button>
+```
 
 Note: The attribute `keypress-click` maps to the keycode of the button. Some common ones have been abstracted:
 
