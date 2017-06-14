@@ -1,4 +1,6 @@
 # keypress-click
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/ianmcnally/keypress-click.svg)](https://greenkeeper.io/)
 An Angular directive to click on a keypress
 
 ## Installation
