@@ -4,10 +4,10 @@
   "description": "Angular directive to click on a keypress",
   "private": true,
   "devDependencies": {
-    "coffeelint": "~1.1.0",
-    "grunt": "~0.4.2",
-    "grunt-contrib-coffee": "~0.10.0",
-    "grunt-coffeelint": "0.0.8",
-    "grunt-contrib-watch": "~0.5.3"
+    "coffeelint": "~1.16.0",
+    "grunt": "~1.0.1",
+    "grunt-contrib-coffee": "~1.0.0",
+    "grunt-coffeelint": "0.0.16",
+    "grunt-contrib-watch": "~1.0.0"
   }
 }
